@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Creature Clicker XL</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Fredoka:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="animated-background"></div>
+    <div id="notification-area"></div>
+
+    <!-- MENU HAMBURGER -->
+    <button id="open-menu-btn">☰</button>
+<button id="open-inventory-btn-top">INVENTAIRE</button>
+    <!-- BOUTON INVENTAIRE HAUT DROITE -->
+    <button id="open-inventory-btn-top">INVENTAIRE</button>
+
+    <div id="side-menu">
+        <button id="close-menu-btn">✕</button>
+        <div class="menu-items">
+            <button class="menu-btn active" data-tab="clicker">🥚 CLIQUER</button>
+            <button class="menu-btn" data-tab="collection">📦 COLLECTION</button>
+            <button class="menu-btn" data-tab="shop">🏪 BOUTIQUE</button>
+        </div>
+    </div>
+
+    <!-- PAGE CLIQUER -->
+    <div id="clicker-tab" class="tab-content active">
+        <div id="clicker-layout">
+            <div id="slots-left" class="slots-side"></div>
+            <div id="center-column">
+                <div id="hud">
+                    <div id="money-display"><span id="current-money">0 €</span></div>
+                    <div id="click-bar-container">
+                        <div id="click-progress-bar"></div>
+                    </div>
+                    <div id="click-counter">CLICS : 0 / 15</div>
+                </div>
+                <img src="oeuf_commun_-removebg-preview.png" id="egg" alt="Oeuf">
+            </div>
+            <div id="slots-right" class="slots-side"></div>
+        </div>
+    </div>
+
+    <!-- PAGE COLLECTION -->
+    <div id="collection-tab" class="tab-content">
+        <h2 class="page-title">COLLECTION</h2>
+        <p class="info-text">Créatures obtenues : <strong id="collected-count">0</strong> / 12</p>
+        <div id="full-collection" class="pokedex-grid"></div>
+    </div>
+
+    <!-- PAGE BOUTIQUE -->
+    <div id="shop-tab" class="tab-content">
+        <h2 class="page-title">BOUTIQUE</h2>
+        <div class="shop-grid">
+            <div class="shop-item">
+                <img src="oeuf_in-removebg-preview.png" class="shop-egg-img">
+                <h3>Œuf Rare Garanti</h3>
+                <p>Rare ou mieux</p>
+                <p class="price">50 000 €</p>
+                <button class="buy-btn" data-type="rare-egg">ACHETER</button>
+            </div>
+            <div class="shop-item">
+                <img src="oeuf_epic-removebg-preview.png" class="shop-egg-img">
+                <h3>Œuf Épique Garanti</h3>
+                <p>Épique ou Légendaire</p>
+                <p class="price">200 000 €</p>
+                <button class="buy-btn" data-type="epic-egg">ACHETER</button>
+            </div>
+            <div class="shop-item">
+                <img src="oeuf_legendaire_-removebg-preview.png" class="shop-egg-img">
+                <h3>Œuf Légendaire</h3>
+                <p>Guaranteed</p>
+                <p class="price">1 000 000 €</p>
+                <button class="buy-btn" data-type="legendary-egg">ACHETER</button>
+            </div>
+            <div class="shop-item">
+                <img src="oeuf_commun_-removebg-preview.png" class="shop-egg-img">
+                <h3>Slot +1</h3>
+                <p>+1 créature active</p>
+                <p class="price" id="slot-price">100 000 €</p>
+                <button class="buy-btn" data-type="extra-slot">ACHETER</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALE INVENTAIRE -->
+    <div id="inventory-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>INVENTAIRE</h2>
+                <button id="close-inventory-btn">X</button>
+            </div>
+            <div id="storage-list" class="inventory-grid"></div>
+        </div>
+    </div>
+
+    <script src="style.js"></script>
+</body>
+</html>
